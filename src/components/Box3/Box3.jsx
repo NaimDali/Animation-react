@@ -1,24 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function Box1() {
+export default function Box3() {
   return (
     <div className="BoxContainer">
       <motion.div
         className="Box"
-        animate={{
-          x: 400,
-          rotate: 360,
-          opacity: 1,
+        drag
+        dragConstraints={{
+          right: 20,
+          left: 20,
+          top: 5,
         }}
-        initial={{
-          x: 0,
-          opacity: 0.2,
-        }}
-        transition={{
-          duration: 2,
-          delay: 0.5,
-        }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
       ></motion.div>
     </div>
   );
